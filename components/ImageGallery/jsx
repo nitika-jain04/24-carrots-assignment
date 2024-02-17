@@ -1,0 +1,33 @@
+import React from "react";
+
+const ImageWithOverlay = ({ src, alt, text }) => {
+  return (
+    <div className="relative group">
+      <img className="w-1/2" src={src} alt={alt} />
+      <div className="absolute inset-0 bg-orange-600 opacity-0 group-hover:opacity-75 transition-opacity">
+        <p className="text-white absolute bottom-5 left-0 right-0 text-center">
+          {text}
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const ImageGallery = () => {
+  return (
+    <div
+      className="pl-20 mt-20 overflow-x-auto flex gap-10"
+      style={{ scrollBehavior: "smooth" }}
+    >
+      <ImageWithOverlay src="/image1.jpeg" alt="Image 1" text="Image 1" />
+      <ImageWithOverlay src="/image2.jpeg" alt="Image 2" text="Image 2" />
+      <ImageWithOverlay src="/image3.jpeg" alt="Image 3" text="Image 3" />
+      <ImageWithOverlay src="/image4.png" alt="Image 4" text="Image 4" />
+      <ImageWithOverlay src="/image5.jpeg" alt="Image 5" text="Image 5" />
+      <ImageWithOverlay src="/image6.jpeg" alt="Image 6" text="Image 6" />
+      <ImageWithOverlay src="/image7.jpeg" alt="Image 7" text="Image 7" />
+    </div>
+  );
+};
+
+export default ImageGallery;
