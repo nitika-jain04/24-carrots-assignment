@@ -9,6 +9,10 @@ import { imagesData, testimonialsData, weddingData } from "@/data";
 import WeddingCard from "./WeddingCard";
 import TestiCard from "./TestiCard";
 import ImagesCard from "./Images";
+import NewsLetter from "./NewsLetter";
+import ImageSlider from "./ImageSlider";
+import Services from "./Services";
+import Banner1 from "./Banner1";
 
 export default function HeroPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -81,6 +85,7 @@ export default function HeroPage() {
           return <WeddingCard />;
         })}
       </div> */}
+
       <div className="mt-40 flex flex-col gap-8 relative mb-[420px]">
         <img className="w-full" src="/banner.png" alt="" />
 
@@ -112,36 +117,7 @@ export default function HeroPage() {
         </div>
       </div>
 
-      <div className="pl-20 mt-20 overflow-x-auto flex gap-10">
-        <img
-          src="/image1.jpeg"
-          className="w-[600px] h-[650px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-        <img
-          src="/image2.jpeg"
-          className="w-[600px] h-[650px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-        <img
-          src="/image3.jpeg"
-          className="w-[600px] h-[650px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-        <img
-          src="/image4.png"
-          className="w-[600px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-        <img
-          src="/image5.jpeg"
-          className="w-[600px] h-[650px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-        <img
-          src="/image6.jpeg"
-          className="w-[600px] h-[650px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-        <img
-          src="/image7.jpeg"
-          className="w-[600px] h-[650px] bg-orange-600 hover:opacity-50 group-hover:opacity-75 transition-opacity group-hover:bg-orange-500"
-        />
-      </div>
+      <ImageSlider />
 
       <div className="flex flex-col gap-10 justify-center items-center mt-40 mb-20">
         <h2 className="text-7xl tracking-wide text-green-900">
@@ -192,6 +168,7 @@ export default function HeroPage() {
           />
         </button>
       </div>
+
       <div className="px-44 pr-24 flex gap-14 mt-40 mb-40">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-5">
@@ -252,7 +229,8 @@ export default function HeroPage() {
               important to our reputation as our gourmet<br></br> food. Our
               staff is certainly the best at what<br></br> they do, and you’ll
               work with professionals<br></br> who genuinely care about the
-              success of<br></br> your event!
+              success of
+              <br></br> your event!
             </p>
             <button
               className="flex gap-2 items-center rounded-3xl px-7 py-2 text-orange-600 border border-orange-600 w-fit mx-auto lg:mx-0"
@@ -294,6 +272,7 @@ export default function HeroPage() {
           </div>
         </div>
       </div>
+
       <div className="bg-green-900 flex flex-col justify-center pb-80 relative">
         <img
           src="/24-logo.png"
@@ -418,6 +397,7 @@ export default function HeroPage() {
         </div> */}
         </div>
       </div>
+
       <div className="flex">
         <div className="w-1/2 bg-gradient-to-r from-orange-600 to-orange-700 px-28 py-28 flex flex-col gap-8">
           <h2 className="text-white text-[55px]">Endless Inspiration</h2>
@@ -459,19 +439,3 @@ export default function HeroPage() {
     </div>
   );
 }
-
-// const ImageWithOverlay = ({ src, alt, text }) => {
-//   return (
-//     <div
-//       className="relative group overflow-x-auto"
-//       style={{ scrollBehavior: "smooth" }}
-//     >
-//       <img className="w-full h-[600px] object-cover" src={src} alt={alt} />
-//       <div className="absolute inset-0 bg-orange-600 opacity-0 group-hover:opacity-75 transition-opacity">
-//         <p className="text-white absolute bottom-5 left-0 right-0 text-center">
-//           {text}
-//         </p>
-//       </div>
-//     </div>
-//   );
-// };
